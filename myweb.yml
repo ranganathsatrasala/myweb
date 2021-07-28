@@ -8,6 +8,7 @@
     tomcat_path: "/root/tomcat8/{{ tomcat_folder }}"
     grep_string: "[/]root/tomcat8/{{ tomcat_folder }}"
 
+
   tasks:
     - name: Copying the war file to the destination
       copy: src=/root/myweb/myweb-0.12.0.war dest="{{ tomcat_path }}/../webapps/"
