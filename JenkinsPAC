@@ -13,6 +13,7 @@ pipeline {
                    }
                    File rangu1 = new File("/tmp/rangu.txt")
                    println "content of my file is ${rangu1.readLines()}"
+                   println "Added"
                         }
                         }
                         }
