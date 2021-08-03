@@ -1,18 +1,26 @@
 pipeline {
     agent any
-    environment {
-        subject = "Jenkins - PAC"
-        batchno = "dvsbatch2"
-    }
-        stages {
-            stage("My First Job with environments") {
-                steps {
-                script {
-                    println "My subject is ${env.subject} Done"
-                    println "My batchno is ${env.batchno}"
+parameters {
+  string defaultValue: 'Devops', description: 'Devops training', name: 'Subject'
+  choice choices: ['Linux', 'Hp-unix', 'Solaris'], name: 'OS'
+}
 
-                }
-            }
+environment {
+    var1 = 20
+}
+ 
+stages {
+  stage('First Stage') {
+    steps {
+        script {
+            var1 = 200
+            println "My Subject value is ${params.Subject}"
+            println "My OS Value is ${params.OS}"
+            println "Accessing env var1 is ${env.var1}"
+            println "Accessing steps var1 is ${var1}"
         }
+    }
+  }
+
 }
 }
