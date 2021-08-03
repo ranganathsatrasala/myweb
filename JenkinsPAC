@@ -1,0 +1,12 @@
+pipeline {
+    agent any 
+        stages {
+            stage("My First Stage") {
+                steps{
+                    script {
+                        print "Hi Team welcome to jenkins groovy scripting"
+                    }
+                }
+            }
+        }
+    }
