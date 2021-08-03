@@ -4,18 +4,11 @@ pipeline {
         stage("Stage 1") {
             steps {
                 script {
-                    var1=251
-                    var2 = 300
-                    if (var1 > var2 ){
-                        println("Good var1 is bigger")
-                        }
-                        else if ( var1 > 250 ){
-                        println("Bad var1 is less than 250")
-                        }
-                        else {
-                        println("Good var2 is bigger")
-                        }
-                        }
+                    var1=10
+                   while ( var1 < 10 ) {
+                   println "printing var1 values ${var1}"
+                   var1 = var1+1
+                   }
                         }
                         }
                         }}
