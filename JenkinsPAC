@@ -11,6 +11,8 @@ pipeline {
                    println "printing var1 values ${i}"
                    myfunc()
                    }
+                   File rangu1 = new File("/tmp/rangu.txt")
+                   println "content of my file is ${rangu1.readLines()}"
                         }
                         }
                         }
