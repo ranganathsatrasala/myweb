@@ -6,6 +6,7 @@ pipeline {
     }
         stages {
             stage("My First Job with environments") {
+                steps {
                 scripts {
                     println "My subject is ${env.subject} Done"
                     println "My batchno is ${env.batchno}"
