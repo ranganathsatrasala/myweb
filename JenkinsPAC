@@ -5,7 +5,7 @@ pipeline {
                 steps{
                     script {
                         print "Hi Team welcome to jenkins groovy scripting"
-                        var1 = 20
+                        def var1 = 20
                         println "Hi my var1 value is ${var1}"
                     }
                 }
