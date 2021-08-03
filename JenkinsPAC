@@ -1,15 +1,16 @@
 pipeline {
-    agent any 
+    agent any
+    environment {
+        subject = "Jenkins - PAC"
+        batchno = "dvsbatch2"
+    }
         stages {
-            stage("My First Stage") {
-                steps{
-                    script {
-                        print "Hi Team welcome to jenkins groovy scripting"
-                        def var1 = 20
-                        println "Hi my var1 value is ${var1}"
-                    }
+            stage("My First Job with environments") {
+                scripts {
+                    println "My subject is ${env.subject}"
+                    println "My batchno is ${env.batchno}"
+
                 }
             }
         }
-    }
-
+}
