@@ -5,8 +5,12 @@ pipeline {
             steps {
                 script {
                     var1=200
-                    if (var1 > 100 ){
-                        println("Good")
+                    var2 = 300
+                    if (var1 > var1 ){
+                        println("Good var1 is bigger")
+                        }
+                        else {
+                        println("Good var2 is bigger")
                         }
                         }
                         }
